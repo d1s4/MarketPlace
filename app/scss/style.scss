@@ -1,7 +1,126 @@
 @import "vars";
 @import "libs";
 @import "fonts";
+@import "global";
 
+.header {
+  background-color: $grey;
+}
+.header__inner {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__user-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__user-btn {
+  background-color: $blue;
+  color: #ffffff;
+  border-radius: 18px;
+  margin-right: 220px;
+  line-height: 28px;
+  padding: 2px 18px;
+  font-size: 14px;
+}
 
+.header__profile {
+  &-box {
+    display: flex;
+    line-height: 24px;
+  }
+  &-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  &-name {
+    display: block;
+    color: $black;
+  }
+  &-balance {
+    display: block;
+    font-size: 15px;
+    color: $blue;
+  }
+}
+
+.menu {
+  background-color: #ffffff;
+}
+.menu__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.menu__list {
+  li + li {
+    margin-left: 33px;
+  }
+  a {
+    text-transform: uppercase;
+    color: $black;
+    font-weight: 500;
+  }
+}
+.menu__search {
+  position: relative;
+}
+.menu__search-box {
+  height: 44px;
+  border-radius: 22px;
+  border: 1px solid #d9dfe5;
+  width: 69px;
+  outline: none;
+  transition: all 0.9s;
+  &::placeholder {
+    font-size: 15px;
+    color: $forms;
+    display: none;
+  }
+  &.opened {
+    width: 360px;
+    padding: 0 72px 0 23px;
+    display: default;
+  }
+}
+.menu__search-btn {
+  position: absolute;
+  height: 46px;
+  width: 70px;
+  border-radius: 23px;
+  border: none;
+  background-color: $blue;
+  top: -1px;
+  right: 0;
+  outline: none;
+  cursor: pointer;
+}
+// menu end
+
+// intro start
+.intro {
+  background-size: contain;
+  background-position: center;
+  opacity: 0.8;
+  background-image: linear-gradient(180deg, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 100%);
+}
+.intro__inner {
+  max-height: 725px;
+  height: 100%;
+  padding: 165px 0;
+  position: relative;
+}
+.intro__subtitle {
+}
+.intro__buttons {
+}
+.intro__btn {
+}
 
 @import "media";
