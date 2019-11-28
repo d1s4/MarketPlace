@@ -24,7 +24,7 @@ body {
   color: $text;
 }
 .container {
-  max-width: 1140px;
+  max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -94,6 +94,7 @@ body {
   &-head {
     margin-bottom: 25px;
     span {
+      font-weight: 500;
       display: block;
       color: #000;
       font-size: 24px;
@@ -116,16 +117,37 @@ body {
       border-radius: 50%;
     }
   }
+  // TODO: need to add icons for all categories
   &-category {
     padding-left: 35px;
     color: $purple;
     position: relative;
-    &::before {
-      content: "\f19a";
-      font-family: "icomoon";
-      color: $purple;
-      left: 12px;
-      position: absolute;
+    &.wordpress {
+      &::before {
+        content: "\f19a";
+        font-family: "icomoon";
+        color: $purple;
+        left: 12px;
+        position: absolute;
+      }
+    }
+    &.psd {
+      &::before {
+        content: "\f016";
+        font-family: "icomoon";
+        color: $purple;
+        left: 12px;
+        position: absolute;
+      }
+    }
+    &.html {
+      &::before {
+        content: "\f13b";
+        font-family: "icomoon";
+        color: $purple;
+        left: 12px;
+        position: absolute;
+      }
     }
   }
 }
@@ -135,21 +157,19 @@ body {
 
 .item {
   &-body {
-    border-bottom: 1px solid #ececec;
+    padding-bottom: 45px;
     span {
       display: inline-block;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
   }
   &-tag {
-    height: 28px;
     background-color: #f1f3f6;
     border-radius: 14px;
     color: #868c96;
     font-size: 15px;
     line-height: 30px;
     padding: 0 10px;
-    margin-bottom: 30px;
   }
 }
 // item body end
@@ -158,9 +178,10 @@ body {
 
 .item {
   &-footer {
+    border-top: 1px solid #ececec;
     display: flex;
     justify-content: space-between;
-    height: 79px;
+    height: 85px;
     align-items: center;
   }
   &-details {
@@ -168,13 +189,18 @@ body {
     font-size: 15px;
   }
   &-price {
-    color: #ffffff;
+    color: $blue;
     height: 32px;
-    background-color: $blue;
-    padding: 0 17px;
+    background-color: $price-bg;
+    padding: 1px 17px 0px;
     font-weight: 500;
     border-radius: 16px;
     margin-right: 18px;
+    transition: all 0.5s;
+    &:hover {
+      background-color: $blue;
+      color: #ffffff;
+    }
   }
   &-likes {
     padding-left: 25px;
@@ -201,5 +227,12 @@ body {
       font-family: "icomoon";
     }
   }
+}
+.rate-yo__mini {
+  padding-top: 8px;
+}
+.mixitup-control-active {
+  background-color: $blue;
+  color: #ffffff;
 }
 // item footer end
