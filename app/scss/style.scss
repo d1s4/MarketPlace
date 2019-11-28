@@ -48,7 +48,7 @@
     color: $blue;
   }
 }
-
+// * MENU START
 .menu {
   background-color: #ffffff;
 }
@@ -102,9 +102,9 @@
   cursor: pointer;
 }
 
-// menu end
+// * menu end
 
-// intro-top start
+// * INTRO-TOP start
 
 .intro-top {
   background-size: contain;
@@ -235,9 +235,9 @@
   }
 }
 
-// intro-top end
+// * intro-top end
 
-// intro-bottom start
+// * INTRO-BOTTOM start
 
 .intro-bottom {
   padding: 175px 0 100px;
@@ -266,9 +266,9 @@
   font-weight: 400;
 }
 
-// intro-bottom end
+// * intro-bottom end
 
-// features start
+// * FEATURED start
 
 .featured {
   background-color: $grey-bg;
@@ -288,152 +288,16 @@
     background-color: #fff;
   }
 }
-.featured__item-prev {
-  position: relative;
-  &:hover .featured__item-hover {
-    opacity: 0.9;
-  }
-}
-.featured__item-hover {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s;
-  background-image: linear-gradient(-90deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
-  opacity: 0;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
-  a {
-    color: #ffffff;
-    padding: 6px 26px;
-    border-radius: 21.5px;
-    border: 1px solid #fff;
-    font-size: 15px;
-    font-weight: 500;
-    transition: all 0.5s;
-    &:hover {
-      background-color: #fff;
-      color: $blue;
-    }
-    & + a {
-      margin-left: 10px;
-    }
-  }
-}
 
 .featured__item {
   &-description {
     padding: 25px 50px 0 50px;
     max-height: 450px;
   }
-  &-head {
-    margin-bottom: 25px;
-    span {
-      display: block;
-      color: #000;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-  }
-  &-author {
-    padding-left: 40px;
-    margin-right: 10px;
-    color: #000000;
-    position: relative;
-    &::before {
-      position: absolute;
-      content: "";
-      left: 0;
-      top: 0;
-      width: 30px;
-      height: 30px;
-      background-color: $purple;
-      border-radius: 50%;
-    }
-  }
-  &-category {
-    padding-left: 35px;
-    color: $purple;
-    position: relative;
-    &::before {
-      content: "\f19a";
-      font-family: "icomoon";
-      color: $purple;
-      left: 12px;
-      position: absolute;
-    }
-  }
 }
 
-.featured__item {
-  &-body {
-    border-bottom: 1px solid #ececec;
-    span {
-      display: inline-block;
-      margin-bottom: 30px;
-    }
-  }
-  &-tag {
-    height: 28px;
-    background-color: #f1f3f6;
-    border-radius: 14px;
-    color: #868c96;
-    font-size: 15px;
-    line-height: 30px;
-    padding: 0 10px;
-    margin-bottom: 30px;
-  }
-}
+// ! Featured slider arrows! maybe need to rename
 
-.featured__item {
-  &-footer {
-    display: flex;
-    justify-content: space-between;
-    height: 79px;
-    align-items: center;
-  }
-  &-details {
-    display: flex;
-    font-size: 15px;
-  }
-  &-price {
-    color: #ffffff;
-    height: 32px;
-    background-color: $blue;
-    padding: 0 17px;
-    font-weight: 500;
-    border-radius: 16px;
-    margin-right: 18px;
-  }
-  &-likes {
-    padding-left: 25px;
-    margin-right: 16px;
-    position: relative;
-    &::before {
-      content: "\f08a";
-      font-family: "icomoon";
-      color: $purple;
-      left: 0;
-      position: absolute;
-    }
-  }
-  &-soldout {
-    padding-left: 25px;
-    font-size: 15px;
-    color: $blue;
-    position: relative;
-    &::before {
-      content: "\f07a";
-      color: $blue;
-      left: 0;
-      position: absolute;
-      font-family: "icomoon";
-    }
-  }
-}
 .slick-arrow {
   position: absolute;
   top: -125px;
@@ -449,24 +313,134 @@
 .slick-prev {
   border-bottom-left-radius: 22.5px;
   border-top-left-radius: 22.5px;
+  right: 100px;
+
   &:before {
     content: "\f104";
     font-size: 15px;
     font-family: "icomoon";
     color: #ffffff;
-    left: 100px;
   }
 }
 .slick-next {
   border-bottom-right-radius: 22.5px;
   border-top-right-radius: 22.5px;
+  right: 45px;
+
   &:before {
     content: "\f105";
     font-size: 15px;
     font-family: "icomoon";
     color: #ffffff;
-    right: 45px;
   }
 }
 
+// * features end
+
+// * NEWEST start
+.newest {
+  background-color: $white-bg;
+  padding: 120px 0;
+  position: relative;
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 88px;
+    transition: all 1s;
+    &.active {
+      margin-bottom: 170px;
+    }
+  }
+}
+
+// !button for filters mixitup
+
+.newest__btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 20px;
+  height: 30px;
+  position: relative;
+  &::before {
+    content: "Filter by:";
+    min-width: 63px;
+    font-size: 16px;
+    position: absolute;
+    right: 25px;
+  }
+}
+.newest__panel-btn {
+  width: 4px;
+  height: 4px;
+  background-color: #a3b1c4;
+  border-radius: 50%;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    background-color: #a3b1c4;
+    border-radius: 50%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    width: 4px;
+    height: 4px;
+    background-color: #a3b1c4;
+    border-radius: 50%;
+  }
+}
+
+// ! filters mixitup
+
+.newest__filter {
+  &-panel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    top: 260px;
+    position: absolute;
+    padding: 0px 30px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px 0px rgba(90, 93, 100, 0.1);
+    height: 0px;
+    background-color: #ffffff;
+    max-width: 1110px;
+    width: 100%;
+    transition: all 1s;
+    opacity: 0;
+    &.active {
+      opacity: 1;
+      height: 92px;
+    }
+    button + button {
+      margin-left: 8px;
+    }
+  }
+
+  &-btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-bottom: 0;
+    padding: 0 15px;
+    &:hover {
+      background-color: $blue;
+      color: #ffffff;
+    }
+  }
+}
+
+// !NEWEST ITEM
+
+.newest__item {
+}
 @import "media";
