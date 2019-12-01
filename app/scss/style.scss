@@ -336,7 +336,7 @@
 
 // * features end
 
-// * NEWEST start
+// * NEWEST + Feed-slider start
 .newest {
   background-color: $white-bg;
   padding: 120px 0;
@@ -531,5 +531,64 @@
   .feed__title {
     margin-bottom: 50px;
   }
+}
+// * NEWEST + Feed-slider end
+
+// * Facts start
+.facts {
+  color: #ffffff;
+  background-color: rgba(#212225, 0.8);
+  padding: 100px 0;
+}
+.facts__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.facts__item {
+  text-align: center;
+  padding-top: 74px;
+  position: relative;
+  &::before {
+    position: absolute;
+    font-family: "icomoon";
+    font-size: 40px;
+    left: 0;
+    right: 0;
+    top: 10px;
+  }
+
+  &.facts__item-products {
+    color: #feb71d;
+  }
+  &.facts__item-sales {
+    color: #58c9e9;
+  }
+  &.facts__item-customers {
+    color: #77de51;
+  }
+  &.facts__item-members {
+    color: #ff6a6d;
+  }
+  .facts__count {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+  .facts__descr {
+    font-size: 18px;
+    color: #ffffff;
+  }
+}
+.facts__item-products::before {
+  content: "\f0b1";
+}
+.facts__item-sales::before {
+  content: "\f0ed";
+}
+.facts__item-customers::before {
+  content: "\f118";
+}
+.facts__item-members::before {
+  content: "\f0c0";
 }
 @import "media";
