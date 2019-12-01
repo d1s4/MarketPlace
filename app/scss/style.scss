@@ -591,4 +591,79 @@
 .facts__item-members::before {
   content: "\f0c0";
 }
+
+// * Facts  end
+
+// * advantages start
+
+.advantages {
+  padding: 120px 0 90px;
+  text-align: center;
+  &__title {
+    h2 {
+      font-size: 36px;
+      color: #000000;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 29px;
+      span {
+        color: $blue;
+      }
+    }
+  }
+  &__subtitle {
+    max-width: 670px;
+    margin: 0 auto 60px;
+  }
+}
+.advantages__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.advantages__item {
+  max-width: 361px;
+  padding: 56px 35px 59px;
+  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  position: relative;
+  max-height: 373px;
+  &::before {
+    position: absolute;
+    font-weight: 300;
+    color: rgba(#5c87f8, 0.2);
+    font-size: 48px;
+    top: 20px;
+    left: 19px;
+  }
+  &-01::before {
+    content: "01";
+  }
+  &-02::before {
+    content: "02";
+  }
+  &-03::before {
+    content: "03";
+  }
+  &-04::before {
+    content: "04";
+  }
+  &-05::before {
+    content: "05";
+  }
+  &-06::before {
+    content: "06";
+  }
+  &-title {
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 29px;
+  }
+}
+.advantages__item-box {
+  padding-top: 100px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
 @import "media";
