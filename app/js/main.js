@@ -5,10 +5,20 @@ $(function() {
 
   $(".featured__slider").slick({
     slidesToShow: 1,
-    prevArrow: '<button type="button" class="slick-prev slick-arrow"></button>',
-    nextArrow: '<button type="button" class="slick-next slick-arrow"></button>'
+    prevArrow:
+      '<button type="button" class="slick-prev slick-arrow slick-arrow__purple"></button>',
+    nextArrow:
+      '<button type="button" class="slick-next slick-arrow slick-arrow__purple"></button>'
   });
-  //TODO: add spesial star/ downloaded already
+  $(".feed-slider__inner").slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow:
+      '<button type="button" class="slick-prev slick-arrow slick-arrow__blue"></button>',
+    nextArrow:
+      '<button type="button" class="slick-next slick-arrow slick-arrow__blue"></button>'
+  });
+  //TODO: add special star/ downloaded already
   $(".rate-yo").rateYo({
     starWidth: "15px",
     rating: 4.5,
