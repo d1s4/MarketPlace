@@ -156,7 +156,6 @@
     justify-content: space-around;
     position: absolute;
     bottom: -67.5px;
-    left: 382px;
     background-color: #fff;
     max-width: 1140px;
     width: 100%;
@@ -168,7 +167,7 @@
       content: "";
       max-width: 1110px;
       width: 100%;
-      min-height: 135px;
+      height: 20px;
       background-color: rgba(#fff, 0.5);
       top: -13px;
       z-index: -1;
@@ -179,7 +178,7 @@
       content: "";
       max-width: 1080px;
       width: 100%;
-      min-height: 135px;
+      height: 40px;
       border-radius: 6px;
       background-color: rgba(#fff, 0.5);
       z-index: -1;
@@ -268,7 +267,6 @@
 
 .featured {
   background-color: $grey-bg;
-  padding: 110px 0;
   &__title {
     margin-bottom: 50px;
   }
@@ -339,7 +337,6 @@
 // * NEWEST + Feed-slider start
 .newest {
   background-color: $white-bg;
-  padding: 120px 0;
   position: relative;
   &__title {
     display: flex;
@@ -526,7 +523,6 @@
 }
 
 .feed-slider {
-  padding: 120px 0;
   background-color: #eff1f5;
   .feed__title {
     margin-bottom: 50px;
@@ -599,22 +595,6 @@
 .advantages {
   padding: 120px 0 90px;
   text-align: center;
-  &__title {
-    h2 {
-      font-size: 36px;
-      color: #000000;
-      margin: 0;
-      padding: 0;
-      margin-bottom: 29px;
-      span {
-        color: $blue;
-      }
-    }
-  }
-  &__subtitle {
-    max-width: 670px;
-    margin: 0 auto 60px;
-  }
 }
 .advantages__inner {
   display: flex;
@@ -666,4 +646,73 @@
   background-repeat: no-repeat;
   background-position: top center;
 }
+
+// * advantages  end
+
+// * action start
+
+.action__inner {
+  display: flex;
+}
+.action__box {
+  background-size: cover;
+  padding: 100px 0;
+  width: 50%;
+  text-align: center;
+  color: #ffffff;
+  min-height: 561px;
+  position: relative;
+
+  &-blue {
+    background-image: url(../img/action-blue.png);
+    background-color: #0674ec;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/content/action-sell.png);
+      width: 120px;
+      height: 101px;
+      transform: translateX(-50%);
+    }
+  }
+  &-purple {
+    background-image: url(../img/action-purple.png);
+    background-color: #7347c1;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/content/action-shop.png);
+      width: 100px;
+      height: 100px;
+      transform: translateX(-50%);
+    }
+  }
+  &-title {
+    margin-top: 150px;
+    margin-bottom: 34px;
+    font-size: 36px;
+  }
+  &-text {
+    margin: 0 auto 49px;
+    max-width: 578px;
+  }
+  &-btn {
+    background-color: #fff;
+    color: $blue;
+    height: 55px;
+    border-radius: 27.5px;
+    text-align: center;
+    padding: 11px 26px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// * action  end
+
+// * feedback start
+
+.feedback {
+  text-align: center;
+}
+
 @import "media";

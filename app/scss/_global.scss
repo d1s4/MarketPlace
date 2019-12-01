@@ -30,7 +30,7 @@ body {
   margin: 0 auto;
 }
 
-.title {
+.title-box {
   width: 100%;
   padding: 40px 30px;
   display: flex;
@@ -46,6 +46,25 @@ body {
     font-weight: 400;
     color: #000000;
   }
+}
+.title {
+  h2 {
+    font-size: 36px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 29px;
+    & > span {
+      color: $blue;
+    }
+  }
+}
+.subtitle {
+  max-width: 670px;
+  margin: 0 auto 60px;
+}
+.section {
+  padding: 120px 0;
 }
 
 // Global items CSS start
@@ -236,4 +255,4 @@ body {
   background-color: $blue;
   color: #ffffff;
 }
-// item footer end
+// item footer end.
