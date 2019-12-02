@@ -714,5 +714,43 @@
 .feedback {
   text-align: center;
 }
+.feedback__inner {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+.feadback-box {
+  padding: 50px 40px;
+  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  max-width: 555px;
+  border-left: 2px solid $blue;
+}
+.feadback-box__user {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  position: relative;
+  margin-bottom: 29px;
+  &::after {
+    content: "\f0e5";
+    font-family: "icomoon";
+    position: absolute;
+    right: 0;
+    top: 20px;
+    font-size: 60px;
+    color: #e8e8e8;
+  }
+  img {
+    margin-right: 19px;
+  }
+}
+.feadback-btn {
+  color: #ffffff;
+  background-color: $blue;
+  height: 55px;
+  border-radius: 27.5px;
+  padding: 12px 35px;
+}
 
 @import "media";
