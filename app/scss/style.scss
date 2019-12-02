@@ -25,6 +25,7 @@
   line-height: 28px;
   padding: 2px 18px;
   font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .header__profile {
   &-box {
@@ -47,7 +48,9 @@
     color: $blue;
   }
 }
+
 // * MENU START
+
 .menu {
   background-color: #ffffff;
 }
@@ -69,23 +72,21 @@
 }
 .menu__search {
   position: relative;
+  max-width: 360px;
+  width: 100%;
 }
 .menu__search-box {
   height: 44px;
   border-radius: 22px;
   border: 1px solid #d9dfe5;
-  width: 69px;
+  width: 360px;
   outline: none;
   transition: all 0.9s;
+  padding: 0 70px 0 25px;
   &::placeholder {
     font-size: 15px;
     color: $forms;
     display: none;
-  }
-  &.opened {
-    width: 360px;
-    padding: 0 72px 0 23px;
-    display: default;
   }
 }
 .menu__search-btn {
@@ -99,6 +100,15 @@
   right: 0;
   outline: none;
   cursor: pointer;
+  &::after {
+    content: "\f002";
+    font-family: "icomoon";
+    color: #ffffff;
+    position: absolute;
+    right: 27px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 // * menu end
@@ -106,12 +116,11 @@
 // * INTRO-TOP start
 
 .intro-top {
-  background-size: contain;
-  background-position: center;
-  opacity: 0.8;
   padding: 160px 0 230px;
   position: relative;
+  background-color: #441c7c;
   background-image: linear-gradient(to left, #0030de 0%, #2e5afb 100%);
+  opacity: 0.8;
 }
 .intro__inner {
   max-height: 725px;
@@ -249,6 +258,7 @@
   min-height: 403px;
   padding: 40px 30px;
   background-repeat: no-repeat;
+  box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.03);
   background-position: center 40px;
   &:hover {
     box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
@@ -916,7 +926,7 @@
     border-radius: 28px;
     background-color: #ffffff;
     color: $blue;
-    padding: 10px 47px;
+    padding: 12px 47px;
   }
 }
 
@@ -936,6 +946,10 @@
     a {
       color: #ababab;
       font-size: 15px;
+      transition: all 0.3s;
+      &:hover {
+        color: #ffffff;
+      }
     }
     li {
       display: block;
@@ -1039,7 +1053,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-
   color: #999999;
   font-size: 15px;
   background-color: #192027;
