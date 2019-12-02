@@ -711,9 +711,6 @@
 
 // * feedback start
 
-.feedback {
-  text-align: center;
-}
 .feedback__inner {
   display: flex;
   justify-content: space-around;
@@ -751,6 +748,99 @@
   height: 55px;
   border-radius: 27.5px;
   padding: 12px 35px;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
+// * feedback  end
+
+// * news start
+
+.news {
+  background-color: #eff1f5;
+}
+.news__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.news__post-box {
+  max-width: 361px;
+  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  img {
+    // margin-bottom: 29px;
+  }
+}
+.news__post {
+  &-decsr {
+    color: #000000;
+    padding: 29px 40px 30px 28px;
+  }
+  &-title {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+}
+.news__post {
+  &-info {
+    border-top: 1px solid #ececec;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 29px;
+    font-size: 15px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 40px;
+      background-color: #ececec;
+      left: 50%;
+      top: 10px;
+    }
+  }
+  &-date {
+    padding-left: 24px;
+    color: #999999;
+    position: relative;
+    &::before {
+      content: "\f017";
+      position: absolute;
+      left: 0;
+      color: $blue;
+      font-family: "icomoon";
+      font-size: 15px;
+    }
+  }
+  &-activity {
+    display: flex;
+    color: #7e7e7e;
+  }
+  &-comments {
+    padding-left: 24px;
+    position: relative;
+    color: #7e7e7e;
+
+    &::before {
+      content: "\f0e5";
+      position: absolute;
+      font-family: "icomoon";
+      left: 0;
+      top: -2px;
+    }
+  }
+  &-views {
+    margin-left: 23px;
+    padding-left: 24px;
+    position: relative;
+    &::before {
+      content: "\f06e";
+      position: absolute;
+      font-family: "icomoon";
+      left: 0;
+    }
+  }
+}
 @import "media";
