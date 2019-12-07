@@ -21,11 +21,56 @@
   background-color: $blue;
   color: #ffffff;
   border-radius: 18px;
-  margin-right: 220px;
   line-height: 28px;
   padding: 2px 18px;
   font-size: 14px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.header__info-inner {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+  padding-left: 45px;
+  div + div {
+    margin-left: 35px;
+  }
+}
+.header__info-item {
+  position: relative;
+  span {
+    text-align: center;
+    position: absolute;
+    color: #ffffff;
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    top: -13px;
+    left: 13px;
+    padding-top: 3px;
+    font-weight: 500;
+  }
+  &::before {
+    color: #7e8fa1;
+    font-size: 20px;
+  }
+}
+.header__info {
+  &-notification {
+    span {
+      background-color: #ff6a6c;
+    }
+  }
+  &-message {
+    span {
+      background-color: #62d03b;
+    }
+  }
+  &-shop {
+    span {
+      background-color: $blue;
+    }
+  }
 }
 .header__profile {
   &-box {
